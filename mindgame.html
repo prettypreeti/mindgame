@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 400px;
+            height:50px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .container{
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: green;
+            font-size: 20px;
+            color: bisque;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+        h1{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MIND GAME</h1>
+        <div>
+            
+            <h2>Enter the number between 1 and 10</h2>
+            <input id ="input" type="number" placeholder="enter the number N">
+            <h2>step 1:double the chosen number</h2>
+            <h2>step2: add the number k to the result obtained in step 1</h2>
+            <input type="number" id="input1" placeholder="enter the number K"> 
+          
+            <h2>step 3:divide the obtained number in step 2 to 2</h2>
+            <h2>step 4: Now subtract the obtained number in Step 3 with the original chosen number N</h2> <br><br>
+            <button onclick="res()">result</button>
+            <h1 id="answer"></h1>
+
+        </div>
+    </div>
+    <script>
+        function res(){ 
+        const N=parseInt(document.getElementById("input").value);
+        const K= parseInt(document.getElementById("input1").value);
+        if(N > 1 && N < 10){
+        if(K%2==0){
+        let result=K/2;
+        console.log(result);
+        document.getElementById("answer").innerHTML= "The answer is:" +result;
+        
+        }
+    else{
+        document.getElementById("answer").innerHTML="k is not even";
+        answer.style.color="red";
+
+    }}else{
+        document.getElementById("answer").innerHTML=" N is not between 1 and 10";
+
+        }
+    
+
+        }
+    </script>
+</body>
+</html>
